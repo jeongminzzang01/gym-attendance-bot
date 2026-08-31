@@ -65,10 +65,8 @@ def build_message(year: int, month: int, mode: str = "floor") -> str:
     actual_rate = required_days / weekday_count * 100
 
     message = (
-        f"📢 *{year}년 {month}월 헬스장 출석 안내*\n"
-        f"이번 달 운영일(평일)은 총 *{weekday_count}일* 입니다.\n"
-        f"지원금 지급 기준인 출석률 *40%*를 달성하려면, "
-        f"*{required_days}일 이상* 출석하세요! (기준 충족 시 약 {actual_rate:.1f}%)"
+        f"🏋️ {year}.{month} 최소 출석일: *{required_days}일 이상* "
+        f"(평일 {weekday_count}일 · {actual_rate:.1f}%)"
     )
     return message
 

@@ -102,7 +102,6 @@ def preview_text(payload: dict) -> str:
     return (
         f"🏋️ {payload['year']}년 {payload['month']}월 최소 출석일: "
         f"[{payload['required_days']}일 이상] (평일 {payload['weekday_count']}일 · {payload['rate']}%)\n"
-        f"⚠️ 이 기준 미달성 시 이번 달 지원금이 지급되지 않습니다.\n"
         f"⏰ 이번 달 마감까지 D-{payload['dday']}"
     )
 
